@@ -5,11 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>汤茹恋</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* 闪烁标题 */
+        h1 {
+            font-size: 3em;
+            animation: flash 1s infinite;
+        }
+
+        /* 图片特效 */
+        img {
+            width: 300px;
+            height: auto;
+            border: 5px solid red;
+            border-radius: 50%;
+            box-shadow: 0 0 30px red;
+            margin: 20px 0;
+        }
+
+        /* 信息文字 */
+        .info {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: lime;
+        }
+
+        /* 签名特效 */
+        .signature {
+            color: yellow;
+            font-size: 1.2em;
+            margin: 30px 0;
+            text-shadow: 0 0 10px yellow;
+        }
+
+        /* 闪烁动画 */
+        @keyframes flash {
+
+            0%,
+            100% {
+                color: red;
+                text-shadow: 0 0 20px red;
+            }
+
+            50% {
+                color: blue;
+                text-shadow: 0 0 20px blue;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <img src="trl.jpg" alt="" width="500" height="auto">
+    <h1>汤茹恋</h1>
+    <img src="trl.jpg" alt="照片">
 
+    <div class="info">年龄：19岁 </div>
+    <div class="info">性别：女</div>
+    <div class="info">爱好：美食、打王者、玩燕云</div>
+
+    <div class="signature">“知其不可奈何而安之若命”</div>
+
+    <p style="color: cyan;">我是m，我喜欢火鸡面、螺狮粉，我喜欢打王者，我喜欢玩燕云。</p>
+
+    <!-- 简单互动：点击改变背景色 -->
+    <script>
+        // 点击页面切换背景色
+        document.body.onclick = function () {
+            const colors = ['black', 'purple', 'darkblue'];
+            const random = Math.floor(Math.random() * colors.length);
+            document.body.style.background = colors[random];
+        }
+    </script>
 </body>
 
 </html>
